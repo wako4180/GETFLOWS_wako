@@ -1,0 +1,25 @@
+ '//END OF INITIAL DATA *REG*' 'XXYYZZ' 'DATA' 'DUMMY'
+ 'INITIAL  DATA'    'XXYYZZ'  'DATA'  'cav.dat'
+ 'CAVERN ,NRCAV,DURATION'  'DAY' 0   1.d30 0.0 1d30
+ 
+ 'Atmosphere' 
+    'COND. P,S1,  ,XIR(NPHA),POR'  3*-1.0  2*-1.0 -1.0d30  -1.
+     'TABLE Krwcx3, Krgcx3,Pcwcx3,Pcgcx3' 6*-1 6*-1
+     'PERM INN' 3*-1
+     'PERM ROC BOUND' -1. -1. -1. -1. -1. -1.0d10
+     'PERM ROC BOUND' -1. -1. -1. -1. -1. -1.0d10
+ 
+ 'Surface                    '  
+    'COND. P,S1,  ,XIR(NPHA),POR'  3*-1.0  2*-1.0 -1.0d30  -1.
+     'TABLE Krwcx3, Krgcx3,Pcwcx3,Pcgcx3' 6*2 6*2
+     'PERM INN' 3*-1
+     'PERM ROC BOUND' -1. -1. -1. -1. -1.0d10  -1.0d10
+     'PERM ROC BOUND' -1. -1. -1. -1. -1.0d10  -1.0d10
+ 
+  'Boundary Condition'
+    'COND. P,S1,  ,XIR(NPHA),POR'  3*-1.0  2*-1.0 -1.0d30  -1.
+     'TABLE Krwcx3, Krgcx3,Pcwcx3,Pcgcx3' 6*-2 6*-2
+     'PERM INN' 3*-1
+     'PERM ROC BOUND' -1. -1. -1. -1. -1.0d10  -1.0d10
+     'PERM ROC BOUND' -1. -1. -1. -1. -1.0d10  -1.0d10
+ 
