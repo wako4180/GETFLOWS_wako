@@ -1,0 +1,198 @@
+---------------------------------------------------------------------------
+'>X-Y-Z discretization'  'CORNER' 'FILE' 'grid.002' 'F'
+---------------------------------------------------------------------------
+'>REGIONSET' 'DATA' 'mat_Reg' 'F'
+ 'Total Region Num.'            7
+ 'Calc' 1
+          1           17           1           1           4           103
+ 'OBC_Atmosphere'           1 
+           1          18           1           1           1           1
+ 'SPE_Surface'           1
+           1          18           1           1           2           2
+ 'GEO_Subsurface'           1 
+           1          18           1           1           3          104
+ 'Injection'  1
+           1          17           1           1           4            4
+ 'Stainless'  3
+          18         18            1           1           3          104
+           2         18            1           1          104         104
+           1         18            1           1            3           3
+ 'Bottom'  1  
+           1          1           1               1    104 104
+
+ 'Injection'  1
+          13          13           1           1          86           86
+---------------------------------------------------------------------------
+'>REGIONALIAS' 'DATA' 'dummy' 'F'
+ 'Total Region ALIAS Num.' 2
+  'UnderGround' 2
+   'GEO_Subsurface'  'Stainless'
+ 'ALL' 3
+   'OBC_Atmosphere' 'SPE_Surface' 'UnderGround'
+---------------------------------------------------------------------------
+'>ROCK DENSITY DISTRIBUTION *REG*' 'DATA' 'dummy' 'F'
+  'ROCKDENS'   3
+    'ALL'   2600.
+    'GEO_Subsurface'  2650.
+    'Stainless'   7850.
+ --------------------------------------------------
+ '>HEATCAPACITY DARA *REG*'  'DATA'      'poro.dat' 'F'
+ 'heat capacity' 3
+     'ALL'           1640.d0
+     'GEO_Subsurface'  0.0 !800.
+     'Stainless'       0.0 !480.     
+ --------------------------------------------------
+ '>THERCONDUCTIVITY DARA *REG*' 'DATA' 'GRID' 'perm.dat' 'F'
+  'thermal conductivity for fluid phase' 4
+     'ALL'           1.d10
+     'SPE_Surface'     0.0  !1296000.
+     'GEO_Subsurface'  0.0  !604800. 
+     'Stainless'       0.0  !1296000.
+---------------------------------------------------------------------------
+'>POROSITY DISTRIBUTION *REG*'  'DATA'      'poro.dat' 'F'
+ 'poro' 4
+ 'OBC_Atmosphere'   1.0d30
+ 'SPE_Surface'      1.0d30
+ 'GEO_Subsurface'   0.38d0
+ 'Stainless'        0.0000001
+ --------------------------------------------------
+'>PERMEABILITY FOR X-,X+,Y-,Y+,Z-,Z+ *REG*' 'DATA' 'GRID' 'perm.dat' 'F'
+ 'perm' 4
+ 'OBC_Atmosphere'   1.0d30
+ 'SPE_Surface'      1e-30
+ 'GEO_Subsurface'   1.8d4
+ 'Stainless'        1e-30
+ --------------------------------------------------
+'>SURFACE LAYER and MANNINGS COEFF. *REG*'  'DATA' 'GRID'   'dummy' 'F'
+ 'approx.opt'   2
+ 'subsurface layer'      145*2
+ 'manning coeff.' 1
+   'SPE_Surface'    1.d30
+---------------------------------------------------------------------------
+'>PREF AND CROCK *REG*'  'DATA' 'dummy' 'F'
+   'ref. press.' 1.033  0.0
+   'CROCK' 1
+   'ALL'   1.5d-5  0.
+---------------------------------------------------------------------------
+'>RELATIVE K TABLE INDICATOR *REG*'  'DATA' 'dummy' 'F'
+ 'Three Phase Option' 5
+  'Kr Tab. Horz,Up,Dwn for W-C' 4
+     'OBC_Atmosphere'       1 1 1
+     'SPE_Surface'          2 2 2
+     'UnderGround'          3*3
+     'Bottom'           3*4
+  'Kr Tab. Horz,Up,Dwn for W-C' 4
+     'OBC_Atmosphere'       1 1 1
+     'SPE_Surface'          2 2 2
+     'UnderGround'          3*3
+     'Bottom'               3*4
+ 'Pc Tab. Horz,Up,Dwn for W-G' 3
+     'OBC_Atmosphere'       1 1 1
+     'SPE_Surface'          2 2 2
+     'UnderGround'          3*3  3 3 3  !     'Well'                 3*1
+  'Pc Tab. Horz,Up,Dwn for W-G' 3
+     'OBC_Atmosphere'       1 1 1
+     'SPE_Surface'          2 2 2
+     'UnderGround'          3*1  3 3 3  !     'Well'                 3*1
+  'Irreducible Saturation(NPHA)' 3
+     'OBC_Atmosphere'       0.001e-30 1e-8 0.0
+     'SPE_Surface'          0.001e-30 1e-8 0.0
+     'UnderGround'          0.01e-30  1e-8 0.0
+---------------------------------------------------------------------------
+'>INI.EQUIL.P0,ROCKPC,FWL *REG*'  'GRID' 'DATA' 'dummy' 'F'
+    'naf,COR(GRI),FWL(LAY),i12,j12,fwp0,fwpc,fwl/layer,rho,iphase'
+  1
+     1 'GRID'  'FWL' 'ALL'        1.033   0.0  3   19.00   1.0   1   100
+---------------------------------------------------------------------------
+'>SOLVERSPLIT *REG*'  'DATA' 'dispersion.csv'  'F'
+   'ID'             1
+    'Calc' 
+---------------------------------------------------------------------------
+ '>DIFFUSIVITY *REG* '  'DATA' 'filename'  'F'
+    'diff-Water' 1
+     'ALL'      3*0.0  !3*1e-5
+    'diff-Air' 1
+     'ALL'      3*0.0
+    'diff-Water' 1
+     'ALL'      3*0.0  !3*1e-5
+    'diff-Air' 1
+     'ALL'      3*0.0
+--------------------------------------------------
+'>TORTUOSITY *REG*    ' 'DATA' 'filename'  'F'
+ 'option'  2 !(=1: Dw/Tort ,=2:Dw*Tort, =3:Dw*Sw^(7/3)*poro^(1/3)[from EPA])
+    'tourtosity' 1
+     'ALL'   0.5d0 0.5d0 0.5d0
+--------------------------------------------------
+'>DISPERSION LENGTH *REG*' 'DATA' 'filename'  'F'
+'option' 2
+ 'alpha-Latral,Transverse' 1
+    'ALL'   100*0.0 1.d0 0.1d0
+--------------------------------------------------
+'>DECAYOPT' 'DATA' 'filename' 'F'
+ 'option' 0
+  'COEFF,POWER'  1.0 1.0
+--------------------------------------------------
+'>ADSORPTION *REG*' 'DATA' 'dummy' 'F'
+'Entry of Region' 1
+    'ALL'   1
+ 'Adsorption Table Set' 1
+
+ '#1For Water'         'F+E'
+ 'b(Kd@m3/Kg),n'      0.0     1.0
+ 'a,cmax'             0.0     0.0
+ 'Sad,Difad'          0.0     0.0
+
+ '#2For R\Air'         'F+E'
+ 'b(Kd@m3/Kg),n'      0.0     1.0
+ 'a,cmax'             0.0     0.0
+ 'Sad,Difad'          0.0     0.0
+
+ '#1For Water'         'F+E'
+ 'b(Kd@m3/Kg),n'      0.0     1.0
+ 'a,cmax'             0.0     0.0
+ 'Sad,Difad'          0.0     0.0
+
+ '#2For R\Air'         'F+E'
+ 'b(Kd@m3/Kg),n'      0.0     1.0
+ 'a,cmax'             0.0     0.0
+ 'Sad,Difad'          0.0     0.0
+ --------------------------------------------------
+ 'SENSIBLE HEAT TARANSFER COEFF' 'DATA' 'FileName'    'F'
+   "HTRS(NNXY)"      100*0.d0
+ --------------------------------------------------
+ 'NET-RADIATION - LATENT HEAT' 'DATA' 'FileName'          'F'
+   "Commnt,NSUN,SCYCL,TSST'      "    2  1.d30 0.d0
+   "Commnt,(TSUN(nWo),nWo=1,NSUN)"        0.d0    1.d30
+   "Commnt,(SUNS(nWo),nWo=1,NSUN)"        0.d0    0.d0
+ --------------------------------------------------
+ 'BAROMETRIC TEMPERATURE History' 'DATA' 'FileName'          'F'
+   'NUMBER of Atmospheric Temperature' 0
+   'Time Series data                 '   0.0d0    1.0d30
+   'Temperatuer Series data          '  15.0d0   15.0d0
+ --------------------------------------------------
+ 'FLUXTOGROUND: FROM SURFACE-WATER TO UNDERGROUND'  'DATA' 'FileName'          'F'
+   'ON:1, OFF:0' 10000*0
+ --------------------------------------------------
+ '>CHANGE PERMEABILITY *REG* '  'DATA' 'filename'  'F'
+    'Option' 1  !only 1
+     'Number of List'  1
+       'PermChange'  'PRIM' -1
+           '#'   11
+0	   1
+0.1	   0.150094635
+0.2	   0.018014399
+0.3	   0.001628414
+0.4	   0.00010156
+0.5	   3.8147E-06
+0.6	   6.87195E-08
+0.7	   3.8742E-10
+0.8	   2.62144E-13
+0.9	   1E-18
+1	   0
+     'REGION' 1
+         'ALL'  1
+ --------------------------------------------------
+
+
+
+

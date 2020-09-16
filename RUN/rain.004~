@@ -1,0 +1,4 @@
+'RAINDATA,narea,duration,i1i2,j1j2,k1,k2,INITIAL *REG*' 'DAY' 1  -1e30  -1e10 0.0
+  1  'Injection'  'm3'  'A'     0.0           4
+'RAINDATA,narea,duration,i1i2,j1j2,k1,k2,INITIAL *REG*' 'DAY' 1  -1e30  0.0  0.1e30
+  1  'Injection'  'm3'  'A'     -7.05882E-5  4
