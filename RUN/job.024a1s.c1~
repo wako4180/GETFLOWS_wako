@@ -1,0 +1,71 @@
+ '//GETFLOWS JOBFILE SETTING:VER.5.4'
+  
+ 'BASIC UNITSYS,PROB,PVT,CHEM ' 'pvt.024'           'F' 0
+ 'BASIC grid,rock others      ' 'blk.012'           'F' 0
+ 'INITIAL DATA                ' 'init.012'          'F' 0
+  
+ 'REPLACE-CONDITIONS/PROP.    ' 'cav.001'           'F' 0
+ 'WELL-OPERATION-DATA         ' 'wld.001'           'F' 0
+ 'RAINFALL-DATA               ' 'rain.004'          'F' 0
+ 'SEA-LEVEL-CHANGE-DATA       ' 'slv.001'           'F' 0
+ 'FLUX-OBSERVATION-POINTS     ' 'obs.001'           'F' 0
+ 'WATER-LEVEL-OBSERVATION     ' 'fwt.001'           'F' 0
+ 'VOLUME-OF-SPECIFIES-WATER-QU' 'masobs.001'        'F' 0
+ 'GRID-HISTORY-OBSERVATION    ' 'ghist.001'         'F' 0
+ 'PRIMARY-CHANGE-DATA         ' 'prmch.001'         'F' 0
+ 'EVAPOTRANSPIRATION-DATA     ' 'evap.001'          'F' 0
+  
+ 'CHECK-LIST-OF-INPUT/CALCULAT' 'output/024a1s/out1.dat'    'F' 1
+ 'MAIN-OUTPUT-LIST            ' 'output/024a1s/outf1.dat'   'F' 100000
+ 'CONVERGENCE-MONITORING      ' 'output/024a1s/out31.dat'   'F' 1
+ 'RESTARTING-BINARY-OUTPUT    ' 'output/024a1s/outb.dat'    'B' 3
+ 'INTERFACE-VELOCITY-OUTPUT   ' 'output/024a1s/bflux.dat'   'B' 100000
+ 'DARCY-VELOCITY-OUTPUT       ' 'output/024a1s/dflux.dat'   'B' 100000
+ 'FLUX-OUTPUT-AT-OBS.-POINTS  ' 'output/024a1s/outcav.dat'  'F' 1
+ 'RAIN-OUTPUT                 ' 'output/024a1s/outrai.dat'  'F' 1
+ 'WATER-LEVEL-OUTPUT          ' 'output/024a1s/outfwt.dat'  'F' 1
+ 'WELL-PERFORMANCE OUTPUT     ' 'output/024a1s/outw.dat'    'F' 100000
+ 'WELL-GROUP-OUTPUT           ' 'output/024a1s/wlgout.dat'  'F' 100000
+ 'WELL-LAYER-OUTPUT           ' 'output/024a1s/wllec.dat'   'F' 100000
+ 'WELL-PULSE-OUTPUT           ' 'output/024a1s/wllpls.dat'  'F' 100000
+ 'SLP-INFORMATION-OUTPUT      ' 'output/024a1s/out7.dat'    'F' 100000
+ 'CHEMICAL-BINARY-OUTPUT      ' 'output/024a1s/outchb.dat'  'B' 100000
+ 'VOLUME-OUTPUT               ' 'output/024a1s/outmas.dat'  'F' 1
+ 'SEA-LEVEL-OUTPUT            ' 'output/024a1s/outsea.dat'  'F' 100000
+ 'SURFACE-WATER-DEPTH         ' 'output/024a1s/outsurf.dat' 'F' 100000
+ 'STEPWISE-DIFFERENCE-OF-CONDI' 'output/024a1s/bdiff.dat'   'B' 100000
+ 'ROCK-PROPERTIES BINARY      ' 'output/024a1s/orockp.dat'  'B' 100000
+ 'OUTPUT-GRID-HISTORY         ' 'output/024a1s/opoint.dat'  'F' 1
+ 'OUTPUT-STATISTICS-EVAPOTRANS' 'output/024a1s/outeva.dat'  'F' 100000
+ 'OUTBIN-STATISTICS-EVAPOTRANS' 'output/024a1s/outeva.bin'  'B' 100000
+ 'OUTPUT-PRIMARY-CHANGE       ' 'output/024a1s/oprmch.dat'  'F' 100000
+  
+ '//END OF FILE SETTING                       ' './0' 'B' 20
+ 'TITLE-OF-SIMULATION                         ' 'Benchmark program for GF'
+ 'SIMULATION-OPTIONS(RUN,CHECK,THROUGH,OBS)   ' 'RUN'
+ 'GRIDBLOCKS            (nnblk,nx,ny,nz)      '    1872     18     1     104
+ 'NEWTON-ITERATION-PARAM.(maxirt)             '  30  1.d30  0.5d0 5 
+ 'SOLVER-SETTING (rnorm,north,nxitr,XYZorder) '  -1.0d-12,3,3 ,300,100*'ZXY'
+ 'SxELECT-SOLVER                               '  'MKL' 'GBILUp' '1 1 , 2 1e-15 1e-10'
+ 'SELECT-SOLVER                               '  'GBICGStab' 'GBILUp' '1 1 , 2 1e-15 1e-10'
+ 'TOLERANCE-OF-CONVERGENCE                    '       0.10000E-05  0.10000E-05  0.10000E-05  0.10000E-05  0.10000E-05  3*0.10000E-03  
+ 'SLP-OPTION-PARAMETERS                       '  2    0.10000E-07  0.10000E-07  0.10000E-07  0.10000E-07  0.10000E-07  3*0.10000E-05
+ 'EPSILONS-FOR-NEWTON-ITERATION               '       0.10000E-09  0.10000E-09  0.10000E-09  0.10000E-09  0.10000E-03  3*0.10000E-03
+ 'MINMAX-VALUES-OF VARIABLES                  '
+   -0.10000E+10    0.00000E-10    0.00000E+00    3*-50.0  
+    0.10000E+31    0.10000E+01    0.10000E+01    3*1000.
+ 'FIXING-REGION-OPTION                        '  2
+ 'EQUILIBRIUM-SET-OPTION                      '  0
+ 'STARTING-TIME-SET                           '  1 -10.0d0
+ 'MAIN-OUTPUT-FORM                            '  'XZY' 3  'SF' 'SW' 'PA' 'RS'
+ 'CHECK-LIST-ITEMS                            ' 10   'PA' 'SW' 'RS' 'PO' 'PE' 'DP' 'DE' 'FVF'  'VIS' 'RHO'
+ '  Keywords:PW,PA,PC,SG,SW,DP,DS,PE,TR,PO,   '
+ '           DE,XC,YC,ZC,HG,FW,BFA,BFW,BFC,   '
+ '           VEA,VEW,VEC,RS,SC,BV,BA          '
+
+ 'AUTOMATIC-TIME-STEP                         ' 100000 1
+ 'TIME-STEP-DATA-SEQ                          ' 10000 4
+ 'NEQ,Delt                                    ' 'DAYS'  10 1.d-2
+ 'NEQ,Delt                                    ' 'DAYS'  10 1.d-1
+ 'NEQ,Delt                                    ' 'DAYS'  10 1.d-2
+ 'NEQ,Delt                                    ' 'DAYS'  10 1.d-1

@@ -1,0 +1,38 @@
+'EVAP1:TABLE OF BETA' 'DATA' 'evap01.dat' 'F'
+'Table Fuctions' 1
+
+'TABLE 1: ALL SURFACE' 23
+ ' SW - BETA : SOIL-1'
+     -1.00   0.000
+     0.00    0.000
+     0.02    0.000
+     0.05    0.000
+     0.08    0.000
+     0.10    0.000
+     0.12    0.050
+     0.15    0.070
+     0.18    0.090
+     0.20    0.110
+     0.22    0.140
+     0.25    0.200
+     0.28    0.300
+     0.30    0.500
+     0.32    0.800
+     0.35    0.950
+     0.38    0.990
+     0.40    1.000
+     0.42    1.000
+     0.45    1.000
+     0.48    1.000
+     0.50    1.000
+     1.00    1.000
+
+
+'EVAP2:BETA-TABLE INDICATOR  *REG*'  'DATA' 'evap02.dat' 'F'
+'REGION BETA-TABLE.NO Max.Depth ' 1
+   'ALL' 1
+
+
+'EVAP3:CHANGE of Time-Series *REG*' 'DATA' 'evap03.dat' 'F'
+'Evapotranspiration Control NO AREA Unit Value *REG*'   'DAY'   0,  1e30  0.0  1e30
+ 1    'ALL'  'mm'   1.00

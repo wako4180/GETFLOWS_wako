@@ -1,0 +1,60 @@
+  ************************
+  *   FILE DEFENITIONS   *
+  ************************
+ 
+       -----  -----------   -------------
+        NO.     Unit.NO.      File Name
+       -----  -----------   -------------
+ 
+         1        11          pvt.024mod                                        
+         2        12          blk.012                                           
+         3        13          init.012                                          
+         4        14          cav.001                                           
+         5        15          wld.001                                           
+         6        16          rain.004                                          
+         7        17          slv.001                                           
+         8        18          obs.001                                           
+         9        19          fwt.001                                           
+        10        20          masobs.001                                        
+        11        21          ghist.001                                         
+        12        22          prmch.001                                         
+        13        23          evap.001                                          
+        14        24          output/024a1s/out1.dat                            
+        15        25          output/024a1s/outf1.dat                           
+        16        26          output/024a1s/out31.dat.0                         
+        17        27          output/024a1s/outb.dat                            
+        18        28          output/024a1s/bflux.dat                           
+        19        29          output/024a1s/dflux.dat                           
+        20        30          output/024a1s/outcav.dat                          
+        21        31          output/024a1s/outrai.dat                          
+        22        32          output/024a1s/outfwt.dat                          
+        23        33          output/024a1s/outw.dat                            
+        24        34          output/024a1s/wlgout.dat                          
+        25        35          output/024a1s/wllec.dat                           
+        26        36          output/024a1s/wllpls.dat                          
+        27        37          output/024a1s/out7.dat                            
+        28        38          output/024a1s/outchb.dat                          
+        29        39          output/024a1s/outmas.dat                          
+        30        40          output/024a1s/outsea.dat                          
+        31        41          output/024a1s/outsurf.dat                         
+        32        42          output/024a1s/bdiff.dat                           
+        33        43          output/024a1s/orockp.dat                          
+        34        44          output/024a1s/opoint.dat                          
+        35        45          output/024a1s/outeva.dat                          
+        36        46          output/024a1s/outeva.bin                          
+        37        47          output/024a1s/oprmch.dat                          
+ 
+ POROSITY DATA (0:Sequential,1:Areal)=           0
+ HEATCAPA DATA (0:Sequential,1:Areal)=           0
+ PERM. DATA(0:Sequential,1:Areal)=           0
+ PERM. DATA(0:Sequential,1:Areal)=           0
+CAV DATA READIN at Time= -9.9000    
+nrcav,dtcav,tcs,tce,trcav=    0  0.10000E+31   0.0000      0.10000E+31  0.10000E+31
+ KEYWORD DRA NOT EXIST.JOB CONTINUES WITHOUT IT.
+ CHECK KEYWORD FOR CHEMICAL OBSERBATION POINTS.
+ CHECK KEYWORD FOR CHEMOBS OUTPUT.
+ CHECK KEYWORD FOR BINARY ADSORP.
+SOLUTN DIAGONAL TOO SMALL, NB,n   1382      1
+SOLUTN DIAGONAL TOO SMALL, NB,n   1382      4
+SOLUTN DIAGONAL TOO SMALL, NB,n   1474      1
+SOLUTN DIAGONAL TOO SMALL, NB,n   1474      4

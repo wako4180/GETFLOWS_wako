@@ -1,0 +1,3 @@
+'*REG* OBS. AREA of MASS & VOLUME OF SPECIFIED QUALITY' 1,  1.d30
+'n,area, PORmin,max,Rsmin,max,Scmin,max'    1  'ALL'          -10. 20. -10. 10.      -10.  10.
+'n,area, PORmin,max,Rsmin,max,Scmin,max'    2  'UnderGround'  -10. 20. -10. 10.      -10.  10.
